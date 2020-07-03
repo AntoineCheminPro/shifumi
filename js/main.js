@@ -1,5 +1,14 @@
 alert("bonjour et bienvenue ! penses tu avoir le talent de me battre?");
 var userName = prompt ("Quel est ton nom?");
+console.log (userName.length);
+if (userName.length <= 1)
+{
+    userName = prompt ("c'est un peu court, deux lettres au minimum !");
+}
+else if (userName.length > 20)
+{
+    userName = prompt ("c'est un peu long, vingt lettres au maximum !");
+}
 // // ask user name and stock it
 
 function goodLuck ()
@@ -51,4 +60,4 @@ else
 {
     alert("tu as perdu, abandonne avant qu'il ne soit trop tard !");
 }
-// taunt user about the victory
+// taunt user about victory
