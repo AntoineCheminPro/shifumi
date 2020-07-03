@@ -15,13 +15,21 @@ while (userName.length > 20 || userName.length <=1)
 };
 // // ask user name and stock it if length between 2 and 20 else ask again
 
+
 function goodLuck ()
 {
-    return prompt (userName + " ,que choisis-tu? pierre feuille ou ciseau?");
+    var userChoice = prompt (userName + " ,que choisis-tu? pierre feuille ou ciseau?");
+    userChoice = userChoice.toLowerCase();
+    while (userChoice)
+    {   if (userChoice !== "pierre" && userChoice !== "feuille" && userChoice !== "ciseau")
+        {    
+            return prompt (userName + " : pierre feuille ou ciseau?");
+        };
+    return userChoice;
 };
 userChoice = goodLuck(userName);
-userChoice = userChoice.toLowerCase();
-// // ask user choice and stock it caseFriendly
+
+// // ask user choice and stock it caseFriendly as it's one of the three good words
 
 var possible = ["pierre", "feuille", "ciseau"];
 // list of the different choice, user or computer
