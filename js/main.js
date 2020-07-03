@@ -1,15 +1,19 @@
 alert("bonjour et bienvenue ! penses tu avoir le talent de me battre?");
+// welcome to user
+
 var userName = prompt ("Quel est ton nom?");
-console.log (userName.length);
-if (userName.length <= 1)
+while (userName.length > 20 || userName.length <=1)
 {
-    userName = prompt ("c'est un peu court, deux lettres au minimum !");
-}
-else if (userName.length > 20)
-{
-    userName = prompt ("c'est un peu long, vingt lettres au maximum !");
-}
-// // ask user name and stock it
+   if (userName.length <= 1)
+    {
+        userName = prompt ("c'est un peu court, deux lettres au minimum !");
+    }
+    else if (userName.length > 20)
+    {
+        userName = prompt ("c'est un peu long, vingt lettres au maximum !");
+    }
+};
+// // ask user name and stock it if length between 2 and 20 else ask again
 
 function goodLuck ()
 {
@@ -47,7 +51,7 @@ function victory (conditionDeVictoire)
     }
         return false;
 }
-// do the set between computer and user choices
+// do the set between computer and user choices return true if user win else false
 if (userChoice === computerChoice)
 {
     alert("égalité, tu as eu de la chance, mais je t'aurai !");
