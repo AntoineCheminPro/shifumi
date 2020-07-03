@@ -15,13 +15,13 @@ while (userName.length > 20 || userName.length <=1)
 };
 // // ask user name and stock it if length between 2 and 20 else ask again
 
-function goodLuck ()
-{
-    return prompt (userName + " ,que choisis-tu? pierre feuille ou ciseau?");
-};
-userChoice = goodLuck(userName);
-userChoice = userChoice.toLowerCase();
-// // ask user choice and stock it caseFriendly
+do
+{    
+   var userChoice = prompt (userName + " ,que choisis-tu? pierre feuille ou ciseau?");
+   userChoice = userChoice.toLowerCase();
+}
+while (userChoice !== "pierre" && userChoice !== "feuille" && userChoice !== "ciseau");
+// // ask user choice and stock it caseFriendly as it's one of the three good words
 
 var possible = ["pierre", "feuille", "ciseau"];
 // list of the different choice, user or computer
@@ -50,7 +50,7 @@ function victory (conditionDeVictoire)
             }
     }
         return false;
-}
+};
 // do the set between computer and user choices return true if user win else false
 if (userChoice === computerChoice)
 {
@@ -63,5 +63,4 @@ else if (victoire === true)
 else
 {
     alert("tu as perdu, abandonne avant qu'il ne soit trop tard !");
-}
-// taunt user about victory
+};
