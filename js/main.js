@@ -18,7 +18,7 @@ var tryAgain = true;
 var scoreHumain = 0;
 var scoreMachine = 0;
 
-while (scoreHumain == 3 || scoreMachine == 3);
+do
 {
     do
     {    
@@ -62,27 +62,27 @@ while (scoreHumain == 3 || scoreMachine == 3);
         afficheScore = ("score : " + userName + " " + scoreHumain + "     score machine : " + scoreMachine); 
         alert("j'ai choisi : "+ computerChoice+ " égalité, tu as eu de la chance, mais je t'aurai !");
         alert(afficheScore);
-        }
+    }
     else if (victoire === true)
     {
-        scoreHumain = scoreHumain +1;
+        scoreHumain ++; 
         afficheScore = ("score : " + userName + " " + scoreHumain + "     score machine : " + scoreMachine); 
         alert("j'ai choisi : "+ computerChoice+ " Tu as gagné ce point, tricherais-tu?");
         alert(afficheScore);
     }
     else
     {
-        scoreMachine = scoreMachine +1;
+        scoreMachine ++;
         afficheScore = ("score : " + userName + " " + scoreHumain + "     score machine : " + scoreMachine); 
         alert("j'ai choisi : "+ computerChoice+ " tu as perdu, abandonne avant qu'il ne soit trop tard !");
         alert(afficheScore);
-    };
-    if (scoreHumain == 3 || scoreMachine == 3)
-    {
-        alert ("partie finie");
-    };
-};
-
-
+    }
+    // if (scoreHumain == 3 || scoreMachine == 3)
+    // {
+    //     alert ("partie finie");
+    // };
+}while (scoreHumain < 3 && scoreMachine < 3);
+console.log( "h" + scoreHumain);
+console.log( "m" + scoreMachine);
 
 // while (tryAgain = false);
