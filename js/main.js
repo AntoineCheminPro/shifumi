@@ -54,13 +54,13 @@ function victory (conditionDeVictoire)
 // do the set between computer and user choices return true if user win else false
 if (userChoice === computerChoice)
 {
-    alert("égalité, tu as eu de la chance, mais je t'aurai !");
+    alert("j'ai choisi : "+ computerChoice+ " égalité, tu as eu de la chance, mais je t'aurai !");
 }
 else if (victoire === true)
 {
-    alert("Tu as gagné ce point, tricherais-tu?");
+    alert("j'ai choisi : "+ computerChoice+ " Tu as gagné ce point, tricherais-tu?");
 }
 else
 {
-    alert("tu as perdu, abandonne avant qu'il ne soit trop tard !");
+    alert("j'ai choisi : "+ computerChoice+ " tu as perdu, abandonne avant qu'il ne soit trop tard !");
 };
