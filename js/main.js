@@ -6,23 +6,27 @@ while (userName.length > 20 || userName.length <=1)
 {
    if (userName.length <= 1)
     {
-        userName = prompt ("c'est un peu court, deux lettres au minimum !");
+        userName = prompt ("c'est un peu court, deux lettres au minimum je te prie !");
     }
     else if (userName.length > 20)
     {
-        userName = prompt ("c'est un peu long, vingt lettres au maximum !");
+        userName = prompt ("c'est un peu long, vingt lettres au maximum s'il te plait. \n un diminutif peut-être?");
     }
 };
 // ask user name and stock it if length between 2 and 20 else ask again
 var scoreHumain = 0;
 var scoreMachine = 0;
 var userChoice = 0;
+// define those var to used them later everywhere
 do
 {
+// first do while if player want to continue
     scoreHumain = 0;
     scoreMachine = 0;
     userChoice = 0;
+    // reset value usefull to replay
     do
+    // second do while since player or computer has 3 points
     {
         do
         {    
@@ -79,6 +83,7 @@ do
             afficheScore = (" \n score : " + userName + " " + scoreHumain + "     score machine : " + scoreMachine); 
             alert("j'ai choisi : " + computerChoice + " tu as perdu, abandonne avant qu'il ne soit trop tard ! " + afficheScore);
         }
+        // one game egality / human point and computer point
         if (scoreHumain == 3)
         {
             alert ("partie finie, je m'incline, tu as gagné ! BRAVO " + userName);
