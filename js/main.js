@@ -2,7 +2,7 @@ alert("bonjour et bienvenue ! penses tu avoir la chance de me battre?");
 // welcome to user
 
 var userName = prompt ("Quel est ton nom?");
-while (userName.length > 20 || userName.length <=1)
+while (userName.length > 20 || userName.length <2)
 {
    if (userName.length <= 1)
     {
